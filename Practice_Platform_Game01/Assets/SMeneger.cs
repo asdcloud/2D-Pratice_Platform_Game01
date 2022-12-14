@@ -9,7 +9,7 @@ public class SMeneger : MonoBehaviour
     public void PlayGame()
     {
         //呼叫第一場景
-        SceneManager.LoadScene("Sample Scene");
+        SceneManager.LoadScene("SampleScene");
     }
 
     public void QuitGame()
