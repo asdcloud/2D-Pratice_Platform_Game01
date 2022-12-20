@@ -8,6 +8,7 @@ public class enemy : MonoBehaviour
     public float speed;
     private Transform playerPos;
     private playerhealth player;
+    public GameObject boom_effect;
 
 
     void Start() {
@@ -27,8 +28,13 @@ public class enemy : MonoBehaviour
         if (other.gameObject.tag == "Player") {
             player.health--;
             Debug.Log(player.health);
+            GameObject effect = Instantiate(boom_effect, transform.position, Quaternion.identity);
+            Destroy(effect, 0.4f);
             Destroy(gameObject);
         } else if (other.gameObject.tag == "bullet") {
+            score.scoreValue++;
+            GameObject effect = Instantiate(boom_effect, transform.position, Quaternion.identity);
+            Destroy(effect, 0.4f);
             Destroy(gameObject);
         }
     }

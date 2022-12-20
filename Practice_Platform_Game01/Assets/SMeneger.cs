@@ -10,12 +10,14 @@ public class SMeneger : MonoBehaviour
     {
         //呼叫第一場景
         SceneManager.LoadScene("SampleScene");
+        score.scoreValue = 0;
     }
 
     public void RestartGame()
     {
         //呼叫第一場景
-        SceneManager.LoadScene("UI 1");
+        SceneManager.LoadScene("SampleScene");
+        score.scoreValue = 0;
     }
 
     public void QuitGame()
@@ -27,5 +29,10 @@ public class SMeneger : MonoBehaviour
     public void GameOver()
     {
         SceneManager.LoadScene("UI 2");
+    }
+
+    public void menu()
+    {
+        SceneManager.LoadScene("UI 1");
     }
 }

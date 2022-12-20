@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  boom_effect: {fileID: 513471136962215612, guid: e3df305485c81294bb6f45836f9d17fa, type: 3}
 --- !u!58 &5421524576594621724
 CircleCollider2D:
   m_ObjectHideFlags: 0
