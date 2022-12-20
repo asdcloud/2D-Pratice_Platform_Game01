@@ -17,6 +17,9 @@ public class enemy : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
+        if (player.health == 0) {
+            Destroy(gameObject);
+        }
         transform.position = Vector2.MoveTowards(transform.position, playerPos.position, speed * Time.deltaTime);
     }
 
