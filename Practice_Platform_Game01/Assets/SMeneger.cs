@@ -23,4 +23,9 @@ public class SMeneger : MonoBehaviour
         //離開遊戲
         Application.Quit();
     }
+
+    public void GameOver()
+    {
+        SceneManager.LoadScene("UI 2");
+    }
 }

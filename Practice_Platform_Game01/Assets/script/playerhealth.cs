@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class playerhealth : MonoBehaviour
+
 {
     
     public int maxHealth = 10;
     public int health;
     public healthbar healthbar;
+    [SerializeField] GameObject gameoverbutton;
 
     void Start()
     {
@@ -23,6 +25,8 @@ public class playerhealth : MonoBehaviour
         if (health == 0) {
             Destroy(gameObject);
             Time.timeScale = 0;
+            gameoverbutton.SetActive(true);
         }
     }
+
 }
