@@ -21,6 +21,6 @@ public class SMeneger : MonoBehaviour
     public void QuitGame()
     {
         //離開遊戲
-        Application.Quit("UI 1");
+        Application.Quit();
     }
 }
