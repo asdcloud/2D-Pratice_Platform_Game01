@@ -12,9 +12,15 @@ public class SMeneger : MonoBehaviour
         SceneManager.LoadScene("SampleScene");
     }
 
+    public void RestartGame()
+    {
+        //呼叫第一場景
+        SceneManager.LoadScene("UI 1");
+    }
+
     public void QuitGame()
     {
         //離開遊戲
-        Application.Quit();
+        Application.Quit("UI 1");
     }
 }
